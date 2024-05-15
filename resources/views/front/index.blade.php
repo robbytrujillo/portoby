@@ -590,6 +590,6 @@
 </footer>
 
 @push('after-script')
-<script src="main.js"></script>
+<script src="{{ asset('js/main.js') }}"></script>
 @endpush
 @endsection
