@@ -35,7 +35,7 @@
             <button class="font-bold text-[26px] leading-[39px] rounded-[30px] p-[30px_40px] bg-portto-purple w-fit transition-all duration-300 hover:shadow-[0_10px_20px_0_#4920E5]">Explore Now</button>
         </div>
         <div class="flex max-w-[471px] max-h-[567px] z-10">
-            <img src="{{asset('images/hero-image.png')}}" class="object-contain w-full h-full" alt="hero image">
+            <img src="{{asset('images/image-hero_rb.png')}}" class="object-contain w-full h-full" alt="hero image">
         </div>
         <img src="{{asset('images/Ellipse.svg')}}" class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2" alt="background icon">
     </div>

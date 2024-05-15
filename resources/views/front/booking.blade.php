@@ -3,7 +3,7 @@
 @section('content')
 
 <section id="Content" class="flex min-h-screen bg-portto-black">
-    <div class="w-[660px] min-h-screen flex flex-col p-[30px_40px] justify-end overflow-hidden bg-[url('{{asset('images/background/side-image.png')}}')] bg-cover bg-center bg-no-repeat">
+    <div class="w-[660px] min-h-screen flex flex-col p-[30px_40px] justify-end overflow-hidden bg-[url('{{asset('images/image-hero.png')}}')] bg-cover bg-center bg-no-repeat">
         <div class="flex flex-col bg-white p-[30px] gap-5 rounded-[30px] w-[580px]">
             <div class="flex items-start h-10 overflow-hidden">
                 <img src="{{asset('images/logos/logo-testi5.svg')}}" class="object-contain h-full" alt="photo">
