@@ -13,4 +13,8 @@ class FrontController extends Controller
     public function details() {
         return view('front.details');
     }
+   
+    public function booking() {
+        return view('front.booking');
+    }
 }
