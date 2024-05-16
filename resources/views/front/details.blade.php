@@ -244,94 +244,9 @@
     </div>
 </section>
 
-<section id="FAQ" class="container max-w-[1130px] mx-auto">
-    <div class="flex gap-[70px] items-center pt-[100px] pb-[150px]">
-        <div class="flex flex-col gap-[30px]">
-            <div class="flex items-center justify-center w-20 h-20 rounded-full shrink-0 bg-portto-purple">
-                <img src="{{asset('/images/icons/messages.svg')}}" alt="icon">
-            </div>
-            <div class="flex flex-col gap-[10px]">
-                <h2 class="font-extrabold text-[50px] leading-[70px]">Frequently Asked Questions</h2>
-                <p class="text-lg text-[#878C9C]">If you have any question please contact me.</p>
-            </div>
-            <a href="" class="bg-portto-black font-bold text-lg text-white rounded-full p-[14px_30px] w-fit transition-all duration-300 hover:bg-white hover:text-portto-black hover:ring hover:ring-portto-black">Contact Me</a>
-        </div>
-        <div class="flex flex-col gap-[30px] w-[603px] shrink-0">
-            <div class="flex flex-col p-5 rounded-2xl bg-[#F4F5F8] w-full">
-                <button class="flex items-center justify-between gap-1 accordion-button" data-accordion="accordion-faq-1">
-                    <span class="text-2xl font-bold">How do I work usually?</span>
-                    <div class="flex arrow w-9 h-9 shrink-0">
-                        <img src="{{asset('/images/icons/arrow-circle-down.svg')}}" class="transition-all duration-300" alt="icon">
-                    </div>
-                </button>
-                <div id="accordion-faq-1" class="accordion-content hide">
-                    <p class="text-[20px] leading-[36px] pt-5">As a freelancer, my work process is characterized by flexibility, self-discipline, and a strong emphasis on client communication.</p>
-                </div>
-            </div>
-            <div class="flex flex-col p-5 rounded-2xl bg-[#F4F5F8] w-full">
-                <button class="flex items-center justify-between gap-1 accordion-button" data-accordion="accordion-faq-2">
-                    <span class="text-2xl font-bold">How much I charge per project?</span>
-                    <div class="flex arrow w-9 h-9 shrink-0">
-                        <img src="{{asset('/images/icons/arrow-circle-down.svg')}}" class="transition-all duration-300" alt="icon">
-                    </div>
-                </button>
-                <div id="accordion-faq-2" class="accordion-content hide">
-                    <p class="text-[20px] leading-[36px] pt-5">I don’t charge hourly. I charge based on the project brief and given timeline to finish that particular project.</p>
-                </div>
-            </div>
-            <div class="flex flex-col p-5 rounded-2xl bg-[#F4F5F8] w-full">
-                <button class="flex items-center justify-between gap-1 accordion-button" data-accordion="accordion-faq-3">
-                    <span class="text-2xl font-bold">Can I work full-time?</span>
-                    <div class="flex arrow w-9 h-9 shrink-0">
-                        <img src="{{asset('/images/icons/arrow-circle-down.svg')}}" class="transition-all duration-300" alt="icon">
-                    </div>
-                </button>
-                <div id="accordion-faq-3" class="accordion-content hide">
-                    <p class="text-[20px] leading-[36px] pt-5">I don’t work full-time. At this moment, I prefer to work remotely and based on the certain project only.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<x-faq/>
 
-<footer class="bg-portto-black text-white pb-[50px] border-t-[10px] border-portto-purple">
-    <div class="container max-w-[1130px] mx-auto flex justify-between pt-[100px] pb-[50px] mb-[50px] relative border-b border-[#585867]">
-        <img src="{{asset('/images/Ellipse.svg')}}" class="absolute h-[300px] top-[70px] -left-[20px] z-0" alt="icon">
-        <div class="z-10 flex shrink-0 h-fit">
-            <img src="{{asset('/images/logos/logo.svg')}}" alt="logo">
-        </div>
-        <div class="flex gap-[100px] z-10">
-            <div class="flex flex-col gap-5">
-                <p class="text-lg font-bold">Explore</p>
-                <a href="" class="font-medium transition-all duration-300 hover:font-semibold hover:text-portto-light-gold">Services</a>
-                <a href="" class="font-medium transition-all duration-300 hover:font-semibold hover:text-portto-light-gold">Testimonials</a>
-                <a href="" class="font-medium transition-all duration-300 hover:font-semibold hover:text-portto-light-gold">Pricing</a>
-                <a href="" class="font-medium transition-all duration-300 hover:font-semibold hover:text-portto-light-gold">About</a>
-            </div>
-            <div class="flex flex-col gap-5">
-                <p class="text-lg font-bold">Services</p>
-                <a href="" class="font-medium transition-all duration-300 hover:font-semibold hover:text-portto-light-gold">UI/UX Design</a>
-                <a href="" class="font-medium transition-all duration-300 hover:font-semibold hover:text-portto-light-gold">Web Development</a>
-                <a href="" class="font-medium transition-all duration-300 hover:font-semibold hover:text-portto-light-gold">Data Science</a>
-                <a href="" class="font-medium transition-all duration-300 hover:font-semibold hover:text-portto-light-gold">Digital Marketing</a>
-            </div>
-            <div class="flex flex-col gap-5">
-                <p class="text-lg font-bold">About</p>
-                <a href="" class="font-medium transition-all duration-300 hover:font-semibold hover:text-portto-light-gold">My Profile</a>
-                <a href="" class="font-medium transition-all duration-300 hover:font-semibold hover:text-portto-light-gold">How do I work</a>
-                <a href="" class="font-medium transition-all duration-300 hover:font-semibold hover:text-portto-light-gold">Achievements</a>
-                <a href="" class="font-medium transition-all duration-300 hover:font-semibold hover:text-portto-light-gold">Team A</a>
-            </div>
-            <div class="flex flex-col gap-5">
-                <p class="text-lg font-bold">Connect</p>
-                <a href="" class="font-medium hover:font-semibold hover:text-portto-light-gold transition-all duration-300 flex items-center gap-[6px]"><img src="{{asset('/images/icons/call.svg')}}" alt="icon">+1 2208 1996</a>
-                <a href="" class="font-medium hover:font-semibold hover:text-portto-light-gold transition-all duration-300 flex items-center gap-[6px]"><img src="{{asset('/images/icons/dribbble.svg')}}" alt="icon">buildwithangga</a>
-                <a href="" class="font-medium hover:font-semibold hover:text-portto-light-gold transition-all duration-300 flex items-center gap-[6px]"><img src="{{asset('/images/icons/sms.svg')}}" alt="icon">team@bwa.com</a>
-            </div>
-        </div>
-    </div>
-    <p class="text-sm text-[#A0A0AC] text-center">All Rights Reserved. Copyright BuildWithAngga 2024.</p>
-</footer>
+<x-footer/>
 
 @push('after-style')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
