@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use Illuminate\Http\Request;
+use illuminate\Support\Facades\DB;
 
 class ProjectController extends Controller
 {
@@ -30,9 +31,19 @@ class ProjectController extends Controller
     {
         //
         $validated = $request->validate([
-            'name' => 'required|string|max:255',
+            'name'     => 'required|string|max:255',
             'category' => 'required|string|in:Website Development, App Development, Machine Learning',
+            'cover'    => 'required|image|mimes:png|max:2048',
+            'about'     => 'required|string|max:65535',
         ]);
+
+        DB::beginTransaction();
+
+        try {
+
+        }catch(\Exception $e) {
+            
+        }
     }
 
     /**
