@@ -35,7 +35,7 @@ class ProjectController extends Controller
             'name'     => 'required|string|max:255',
             'category' => 'required|string|in:Website Development, App Development, Machine Learning',
             'cover'    => 'required|image|mimes:png|max:2048',
-            'about'     => 'required|string|max:65535',
+            'about'     => 'required|string|max:65535'
         ]);
 
         DB::beginTransaction();
