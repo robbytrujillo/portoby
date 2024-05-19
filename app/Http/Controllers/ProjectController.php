@@ -29,6 +29,10 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         //
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'category' => 'required|string|in:Website Development, App Development, Machine Learning',
+        ]);
     }
 
     /**

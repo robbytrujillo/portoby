@@ -8,7 +8,9 @@
     <div class="py-12">
         <div class="max-w-5xl mx-auto sm:px-6 lg:px-8">
             <div class="p-10 overflow-hidden bg-white shadow-sm sm:rounded-lg">
-                <form action="">
+                
+                <form action="{{ route('admin.projects.store') }}" enctype="multipart/form-data" method="POST">
+                    @csrf
                     <div class="flex flex-col gap-y-5">
                         <h1 class="text-3xl font-bold text-indigo-950">Add New Project</h1>
                         <div class="flex flex-col gap-y-2">
