@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use illuminate\Support\Facades\DB;
+use illuminate\Support\Str;
+//use Str;
 
 class ProjectController extends Controller
 {
@@ -42,7 +44,9 @@ class ProjectController extends Controller
         try {
             if ($request->hasFile('cover')) {
                 $path = $request->file('cover')->store('projects', 'public');
+                $validated['cover'] = $path;
             }
+            $validated['slug'] = Str::slug($request->name);
         }catch(\Exception $e) {
             
         }
