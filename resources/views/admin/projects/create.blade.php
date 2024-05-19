@@ -8,6 +8,16 @@
     <div class="py-12">
         <div class="max-w-5xl mx-auto sm:px-6 lg:px-8">
             <div class="p-10 overflow-hidden bg-white shadow-sm sm:rounded-lg">
+
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                 <li class="py-5 font-bold text-white bg-red-700">{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 
                 <form action="{{ route('admin.projects.store') }}" enctype="multipart/form-data" method="POST">
                     @csrf

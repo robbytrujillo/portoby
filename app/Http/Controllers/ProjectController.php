@@ -6,7 +6,6 @@ use App\Models\Project;
 use Illuminate\Http\Request;
 use illuminate\Support\Facades\DB;
 use illuminate\Support\Str;
-//use Str;
 
 class ProjectController extends Controller
 {
@@ -46,8 +45,18 @@ class ProjectController extends Controller
                 $path = $request->file('cover')->store('projects', 'public');
                 $validated['cover'] = $path;
             }
+            
             $validated['slug'] = Str::slug($request->name);
+
+            $newProject = Project::create($validated);
+
+            DB::commit();
+
+            return redirect()->route('admin.projects.index')->with('success', 'Project created succesfully!');
         }catch(\Exception $e) {
+            DB::rollBack();
+
+            return redirect()->back()->with('error', 'Project created error!'.$e->getMessage());
             
         }
     }
