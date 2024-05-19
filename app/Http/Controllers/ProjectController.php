@@ -40,7 +40,9 @@ class ProjectController extends Controller
         DB::beginTransaction();
 
         try {
-
+            if ($request->hasFile('cover')) {
+                $path = $request->file('cover')->store('projects', 'public');
+            }
         }catch(\Exception $e) {
             
         }
