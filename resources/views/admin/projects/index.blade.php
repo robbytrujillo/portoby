@@ -13,20 +13,22 @@
                 </a>
                 <hr class="my-10">
                 <div class="flex-col gap-y-5">
+
+                    @forelse ($projects as $project)
                     {{-- melakukan foreach data daru table project --}}
                     <div class="flex flex-row items-center justify-between item-project ">
                         <div class="flex flex-row items-center gap-x-5">
-                            <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="object-cover w-[120px] h-[90px] rounded-2xl">
-                                <div class="flex-col gap-y-1">
+                            <img src="{{ Storage::url($project->cover) }}" class="object-cover w-[120px] h-[90px] rounded-2xl">
+                                <div class="flex flex-col gap-y-1">
                                     <h3 class="text-xl font-bold">
-                                        Portoby
+                                        {{ $project->name }}
                                     </h3>
                                     <p class="text-sm text-slate-400">
-                                        Website Development
+                                        {{ $project->category }}
                                     </p>
                                 </div>
                             </div>
-                        <div class="flex flex-row gap-x-2">
+                        <div class="flex flex-row items-center gap-x-2">
                              <a href="" class="px-5 py-3 text-white rounded-full bg-indigo-950">
                                 Add Tools
                             </a>
@@ -34,8 +36,8 @@
                                 Add Screenshoots
                             </a>
                         </div>
-                        <div class="flex flex-row gap-x-2">
-                             <a href="" class="px-5 py-3 text-white bg-indigo-500 rounded-full">
+                        <div class="flex flex-row items-center gap-x-2">
+                             <a href="{{ route('admin.projects.edit', $project) }}" class="px-5 py-3 text-white bg-indigo-500 rounded-full">
                                 Edit
                             </a>
                             <a href="" class="px-5 py-3 text-white bg-red-500 rounded-full">
@@ -43,6 +45,12 @@
                             </a>
                         </div>
                     </div>
+                    @empty
+                    <p>
+                        Belum ada project tersedia
+                    </p>
+                    @endforelse
+                    
                 </div>
             </div>
         </div>
