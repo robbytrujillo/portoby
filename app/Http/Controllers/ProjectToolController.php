@@ -47,7 +47,7 @@ class ProjectToolController extends Controller
         try {
             $validated['project_id'] = $project->id;
             
-            $assignTool = ProjectTool::create($validated);
+            $assignTool = ProjectTool::updateOrCreate($validated);
 
             DB::commit();
 
@@ -90,5 +90,13 @@ class ProjectToolController extends Controller
     public function destroy(ProjectTool $projectTool)
     {
         //
+        try {
+            $projectTool->delete();
+            return redirect()->back()->with('success', 'Project Tool updated succesfully!');
+        } catch(\Exception $e){
+            DB::rollBack();
+
+            return redirect()->back()->with('error', 'Project Tool created error!'.$e->getMessage());
+        }
     }
 }
