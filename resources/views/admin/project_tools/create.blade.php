@@ -23,6 +23,19 @@
                     @csrf
                     <div class="flex flex-col gap-y-5">
                         <h1 class="text-3xl font-bold text-indigo-950">Assign Tool</h1>
+
+                        <div class="flex flex-row items-center gap-x-5">
+                            <img src="{{ Storage::url($project->cover) }}" class="object-cover w-[120px] h-[90px] rounded-2xl">
+                                <div class="flex flex-col gap-y-1">
+                                    <h3 class="text-xl font-bold">
+                                        {{ $project->name }}
+                                    </h3>
+                                    <p class="text-sm text-slate-400">
+                                        {{ $project->category }}
+                                    </p>
+                                </div>
+                        </div>
+
                         <div class="flex flex-col gap-y-2">
                             <h3>Tools</h3>
                             <select name="tool_id" id="tool_id">
@@ -37,6 +50,44 @@
                         <button type="submit" class="w-full py-4 font-bold text-white rounded-full bg-slate-500">Assign Tool</button>
                     </div>
                 </form>
+
+                <hr class="my-10">
+                <h3 class="text-xl font-bold text-indigo-950">Existing Tools</h3>
+
+                <div class="flex-col gap-y-5">
+
+                    @forelse ($project->tools as $tool)
+                    {{-- melakukan foreach data daru table tool --}}
+                    <div class="flex flex-row items-center justify-between item-tool ">
+                        <div class="flex flex-row items-center gap-x-5">
+                            <img src="{{ Storage::url($tool->logo) }}" class="object-cover w-[120px] h-[90px] rounded-2xl">
+                                <div class="flex flex-col gap-y-1">
+                                    <h3 class="text-xl font-bold">
+                                        {{ $tool->name }}
+                                    </h3>
+                                    <p class="text-sm text-slate-400">
+                                        {{ $tool->tagline }}
+                                    </p>
+                                </div>
+                            </div>
+                        <div class="flex flex-row items-center gap-x-2">
+                            <form action="{{ route('admin.tools.destroy', $tool) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="px-5 py-3 text-white bg-red-500 rounded-full">
+                                    Delete
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    @empty
+                    <p>
+                        Belum ada tool tersedia
+                    </p>
+                    @endforelse
+                    
+                </div>
+
             </div>
         </div>
     </div>

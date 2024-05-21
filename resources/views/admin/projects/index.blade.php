@@ -27,7 +27,7 @@
                                         {{ $project->category }}
                                     </p>
                                 </div>
-                            </div>
+                        </div>
                         <div class="flex flex-row items-center gap-x-2">
                              <a href="{{ route('admin.project.assign.tool', $project) }}" class="px-5 py-3 text-white rounded-full bg-indigo-950">
                                 Add Tools
