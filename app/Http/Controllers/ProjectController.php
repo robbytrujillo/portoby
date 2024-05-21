@@ -36,7 +36,7 @@ class ProjectController extends Controller
         //
         $validated = $request->validate([
             'name'     => 'required|string|max:255',
-            'category' => 'required|string|in:Website Development, App Development, Machine Learning',
+            'category' => 'required|string|',
             'cover'    => 'required|image|mimes:png|max:2048',
             'about'     => 'required|string|max:65535'
         ]);
@@ -92,8 +92,8 @@ class ProjectController extends Controller
         //
         $validated = $request->validate([
             'name'     => 'required|string|max:255',
-            'category' => 'required|string|in:Website Development, App Development, Machine Learning',
-            'cover'    => 'required|image|mimes:png|max:2048',
+            'category' => 'required|string|',
+            'cover'    => 'sometimes|image|mimes:png|max:2048',
             'about'     => 'required|string|max:65535'
         ]);
 
@@ -107,11 +107,11 @@ class ProjectController extends Controller
             
             $validated['slug'] = Str::slug($request->name);
 
-            $newProject = Project::create($validated);
+            $project->update($validated);
 
             DB::commit();
 
-            return redirect()->route('admin.projects.index')->with('success', 'Project created succesfully!');
+            return redirect()->route('admin.projects.index')->with('success', 'Project updated succesfully!');
         }catch(\Exception $e) {
             DB::rollBack();
 
