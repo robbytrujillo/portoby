@@ -23,7 +23,7 @@
                     @csrf
                     @method('PUT')
                     <div class="flex flex-col gap-y-5">
-                        <h1 class="text-3xl font-bold text-indigo-950">Add New Project</h1>
+                        <h1 class="text-3xl font-bold text-indigo-950">Add Update Project</h1>
                         <div class="flex flex-col gap-y-2">
                             <h3>Name</h3>
                             <input value="{{ $project->name }}" type="text" id="name" name="name">

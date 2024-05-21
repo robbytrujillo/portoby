@@ -14,6 +14,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
+        // $projects = Project::withTrashed()->orderBy('id', 'desc')->get();
         $projects = Project::orderBy('id', 'desc')->get();
         return view('admin.projects.index', [
             'projects' => $projects
@@ -126,5 +127,13 @@ class ProjectController extends Controller
     public function destroy(Project $project)
     {
         //
+        try {
+            $project->delete();
+            return redirect()->back()->with('success', 'Project updated succesfully!');
+        } catch(\Exception $e){
+            DB::rollBack();
+
+            return redirect()->back()->with('error', 'Project created error!'.$e->getMessage());
+        }
     }
 }
