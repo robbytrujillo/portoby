@@ -40,7 +40,7 @@
                              <a href="{{ route('admin.projects.edit', $project) }}" class="px-5 py-3 text-white bg-indigo-500 rounded-full">
                                 Edit
                             </a>
-                            <a href="" class="px-5 py-3 text-white bg-red-500 rounded-full">
+                            <a href="#" class="px-5 py-3 text-white bg-red-500 rounded-full">
                                 Delete
                             </a>
                         </div>
