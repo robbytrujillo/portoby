@@ -31,7 +31,7 @@
                         <div class="flex flex-col gap-y-2">
                             <h3>Category</h3>
                             <select name="category" id="category">
-                                <option value="">--Choose Category Below--</option>
+                                <option selected value="{{ $project->category }}">{{ $project->category }}</option>
                                 <option value="Website Development">Website Development</option>
                                 <option value="App Development">App Development</option>
                                 <option value="Machine Learning">Machine Learning</option>
@@ -39,11 +39,12 @@
                         </div>
                         <div class="flex flex-col gap-y-2">
                             <h3>Cover Image</h3>
+                            <img src="{{ Storage::url($project->cover) }}" alt="" class="object-cover w-[120px] h-[90px] rounded-2xl">
                             <input type="file" id="cover" name="cover">
                         </div>
                         <div class="flex flex-col gap-y-2">
                             <h3>About</h3>
-                            <textarea name="about" id="about" cols="30" rows="10"></textarea>
+                            <textarea name="about" id="about" cols="30" rows="10">{{ $project->about }}</textarea>
                         </div>
                         <button type="submit" class="w-full py-4 font-bold text-white rounded-full bg-slate-500">Upload Project</button>
                     </div>

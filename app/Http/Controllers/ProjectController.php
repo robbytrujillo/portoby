@@ -90,6 +90,34 @@ class ProjectController extends Controller
     public function update(Request $request, Project $project)
     {
         //
+        $validated = $request->validate([
+            'name'     => 'required|string|max:255',
+            'category' => 'required|string|in:Website Development, App Development, Machine Learning',
+            'cover'    => 'required|image|mimes:png|max:2048',
+            'about'     => 'required|string|max:65535'
+        ]);
+
+        DB::beginTransaction();
+
+        try {
+            if ($request->hasFile('cover')) {
+                $path = $request->file('cover')->store('projects', 'public');
+                $validated['cover'] = $path;
+            }
+            
+            $validated['slug'] = Str::slug($request->name);
+
+            $newProject = Project::create($validated);
+
+            DB::commit();
+
+            return redirect()->route('admin.projects.index')->with('success', 'Project created succesfully!');
+        }catch(\Exception $e) {
+            DB::rollBack();
+
+            return redirect()->back()->with('error', 'Project created error!'.$e->getMessage());
+            
+        }
     }
 
     /**
