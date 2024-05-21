@@ -46,7 +46,7 @@
                             <h3>About</h3>
                             <textarea name="about" id="about" cols="30" rows="10">{{ $project->about }}</textarea>
                         </div>
-                        <button type="submit" class="w-full py-4 font-bold text-white rounded-full bg-slate-500">Upload Project</button>
+                        <button type="submit" class="w-full py-4 font-bold text-white rounded-full bg-slate-500">Update Project</button>
                     </div>
                 </form>
             </div>
