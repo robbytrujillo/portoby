@@ -42,12 +42,13 @@ Route::middleware('auth')->group(function () {
         Route::resource('tools', ToolController::class);
         
         Route::resource('project_tools', ProjectToolController::class);
-
         Route::get('/tools/assign/{project}', [ProjectToolController::class, 'create'])->name('project.assign.tool');
-        
         Route::post('/tools/assign/save/{project}', [ProjectToolController::class, 'store'])->name('project.assign.tool.store');
         
         Route::resource('project_screenshots', ProjectScreenshotController::class);
+        Route::get('/screenshot/{project}', [ProjectScreenshotController::class, 'create'])->name('project_screenshots.create');
+        Route::post('/screenshot/save/{project}', [ProjectScreenshotController::class, 'store'])->name('project_screenshots.store');
+
     });
     
 });

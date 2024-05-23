@@ -19,10 +19,10 @@
                     </div>
                 @endif
                 
-                <form action="{{ route('admin.project.assign.tool.store', $project) }}" enctype="multipart/form-data" method="POST">
+                <form action="{{ route('admin.project_screenshots.tool.store', $project) }}" enctype="multipart/form-data" method="POST">
                     @csrf
                     <div class="flex flex-col gap-y-5">
-                        <h1 class="text-3xl font-bold text-indigo-950">Assign Tool</h1>
+                        <h1 class="text-3xl font-bold text-indigo-950">Add Project Screenshot</h1>
 
                         <div class="flex flex-row items-center gap-x-5">
                             <img src="{{ Storage::url($project->cover) }}" class="object-cover w-[120px] h-[90px] rounded-2xl">
@@ -38,10 +38,10 @@
 
                          <div class="flex flex-col gap-y-2">
                             <h3>Screenshot</h3>
-                            <input type="file" id="cover" name="cover">
+                            <input type="file" id="screenshot" name="screenshot">
                         </div>
                         
-                        <button type="submit" class="w-full py-4 font-bold text-white rounded-full bg-slate-500">Assign Screenshot</button>
+                        <button type="submit" class="w-full py-4 font-bold text-white rounded-full bg-slate-500">Add Screenshot</button>
                     </div>
                 </form>
 
