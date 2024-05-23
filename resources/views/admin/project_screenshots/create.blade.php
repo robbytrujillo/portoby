@@ -19,7 +19,7 @@
                     </div>
                 @endif
                 
-                <form action="{{ route('admin.project_screenshots.tool.store', $project) }}" enctype="multipart/form-data" method="POST">
+                <form action="{{ route('admin.project_screenshots.store', $project) }}" enctype="multipart/form-data" method="POST">
                     @csrf
                     <div class="flex flex-col gap-y-5">
                         <h1 class="text-3xl font-bold text-indigo-950">Add Project Screenshot</h1>
@@ -55,17 +55,17 @@
                     <div class="flex flex-row items-center justify-between item-tool ">
                         <div class="flex flex-row items-center gap-x-5">
                             <img src="{{ Storage::url($screenshot->screenshot) }}" class="object-cover w-[120px] h-[90px] rounded-2xl">
-                                <div class="flex flex-col gap-y-1">
+                                {{-- <div class="flex flex-col gap-y-1">
                                     <h3 class="text-xl font-bold">
-                                        {{ $tool->name }}
+                                        {{ $screenshot->name }}
                                     </h3>
                                     <p class="text-sm text-slate-400">
-                                        {{ $tool->tagline }}
+                                        {{ $screenshot->tagline }}
                                     </p>
-                                </div>
+                                </div> --}}
                             </div>
                         <div class="flex flex-row items-center gap-x-2">
-                            <form action="{{ route('admin.project_tools.destroy', $tool->pivot->id) }}" method="POST">
+                            <form action="{{ route('admin.project_screenshots.destroy', $screenshot->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="px-5 py-3 text-white bg-red-500 rounded-full">
