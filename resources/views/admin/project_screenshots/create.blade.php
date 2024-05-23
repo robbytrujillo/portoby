@@ -36,31 +36,25 @@
                                 </div>
                         </div>
 
-                        <div class="flex flex-col gap-y-2">
-                            <h3>Tools</h3>
-                            <select name="tool_id" id="tool_id">
-                                <option value="">--Choose Tool Below--</option>
-                                @forelse($tools as $tool)
-                                    <option value="{{ $tool->id }}">{{ $tool->name }}</option>
-                                @empty
-                                    <option value="">--Choose Tool Below--</option>
-                                @endforelse
-                            </select>
+                         <div class="flex flex-col gap-y-2">
+                            <h3>Screenshot</h3>
+                            <input type="file" id="cover" name="cover">
                         </div>
-                        <button type="submit" class="w-full py-4 font-bold text-white rounded-full bg-slate-500">Assign Tool</button>
+                        
+                        <button type="submit" class="w-full py-4 font-bold text-white rounded-full bg-slate-500">Assign Screenshot</button>
                     </div>
                 </form>
 
                 <hr class="my-10">
-                <h3 class="text-xl font-bold text-indigo-950">Existing Tools</h3>
+                <h3 class="text-xl font-bold text-indigo-950">Existing Screenshot</h3>
 
                 <div class="flex-col gap-y-5">
 
-                    @forelse ($project->tools as $tool)
+                    @forelse ($project->screenshots as $screenshot)
                     {{-- melakukan foreach data daru table tool --}}
                     <div class="flex flex-row items-center justify-between item-tool ">
                         <div class="flex flex-row items-center gap-x-5">
-                            <img src="{{ Storage::url($tool->logo) }}" class="object-cover w-[120px] h-[90px] rounded-2xl">
+                            <img src="{{ Storage::url($screenshot->screenshot) }}" class="object-cover w-[120px] h-[90px] rounded-2xl">
                                 <div class="flex flex-col gap-y-1">
                                     <h3 class="text-xl font-bold">
                                         {{ $tool->name }}
@@ -82,7 +76,7 @@
                     </div>
                     @empty
                     <p>
-                        Belum ada tool tersedia
+                        Belum ada screenshot tersedia
                     </p>
                     @endforelse
                     
