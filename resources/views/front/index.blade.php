@@ -189,7 +189,7 @@
                         <img src="{{asset('images/Ellipse.svg')}}" class="absolute w-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2" alt="background icon">
                     </div>
                 </div>
-                <div class="group w-[650px] h-[450px] flex shrink-0 rounded-[30px] border border-white p-5 bg-[#FFFFFF33] backdrop-blur relative">
+                {{-- <div class="group w-[650px] h-[450px] flex shrink-0 rounded-[30px] border border-white p-5 bg-[#FFFFFF33] backdrop-blur relative">
                     <div class="w-[608px] h-[408px] rounded-[30px] overflow-hidden absolute">
                         <img src="{{asset('images/thumbnails/thumbnail2.png')}}" class="object-cover w-full h-full" alt="thumbnail">
                     </div>
@@ -214,7 +214,7 @@
                         <a href="details.html" class="z-10 font-bold text-lg text-center w-fit h-fit bg-portto-light-gold rounded-full p-[14px_30px] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">View Details</a>
                         <img src="{{asset('images/Ellipse.svg')}}" class="absolute w-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2" alt="background icon">
                     </div>
-                </div>
+                </div> --}}
             </div>
             <div class="project-container animate-[slide_50s_linear_infinite] group-hover/slider:pause-animate flex gap-[30px] pl-[30px] items-center flex-nowrap ">
                 <div class="group w-[650px] h-[450px] flex shrink-0 rounded-[30px] border border-white p-5 bg-[#FFFFFF33] backdrop-blur relative">
@@ -230,7 +230,7 @@
                         <img src="{{asset('images/Ellipse.svg')}}" class="absolute w-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2" alt="background icon">
                     </div>
                 </div>
-                <div class="group w-[650px] h-[450px] flex shrink-0 rounded-[30px] border border-white p-5 bg-[#FFFFFF33] backdrop-blur relative">
+                {{-- <div class="group w-[650px] h-[450px] flex shrink-0 rounded-[30px] border border-white p-5 bg-[#FFFFFF33] backdrop-blur relative">
                     <div class="w-[608px] h-[408px] rounded-[30px] overflow-hidden absolute">
                         <img src="{{asset('images/thumbnails/thumbnail2.png')}}" class="object-cover w-full h-full" alt="thumbnail">
                     </div>
@@ -255,7 +255,7 @@
                         <a href="details.html" class="z-10 font-bold text-lg text-center w-fit h-fit bg-portto-light-gold rounded-full p-[14px_30px] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">View Details</a>
                         <img src="{{asset('images/Ellipse.svg')}}" class="absolute w-1/2 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2" alt="background icon">
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
