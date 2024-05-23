@@ -6,6 +6,7 @@ use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ToolController;
 use App\Http\Controllers\ProjectToolController;
+use App\Http\Controllers\ProjectScreenshotController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,7 +47,7 @@ Route::middleware('auth')->group(function () {
         
         Route::post('/tools/assign/save/{project}', [ProjectToolController::class, 'store'])->name('project.assign.tool.store');
         
-        // Route::resource('project_tools', ProjectToolController::class);
+        Route::resource('project_screenshots', ProjectScreenshotController::class);
     });
     
 });
