@@ -3,7 +3,7 @@
 @section('content')
 
 <section id="Header" class="flex flex-col gap-[100px] bg-portto-black relative max-h-[665px] mb-[493px]">
-    <nav class="container max-w-[1130px] mx-auto flex justify-between items-center pt-[30px] z-10">
+    {{-- <nav class="container max-w-[1130px] mx-auto flex justify-between items-center pt-[30px] z-10">
         <a href="index.html" class="flex shrink-0 h-fit w-fit">
             <img src="{{asset('/images/logos/logo.svg')}}" alt="logo">
         </a>
@@ -27,7 +27,8 @@
             </ul>
             <button class="bg-portto-light-gold font-bold text-lg p-[14px_30px] rounded-full transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">Hire Me</button>
         </div>
-    </nav>
+    </nav> --}}
+    <x-nav/>
     <div class="hero container max-w-[1130px] mx-auto flex flex-col justify-center items-center relative">
         <h1 class="font-extrabold text-[50px] leading-[70px] text-white text-center z-10">{{ $project->name }}</h1>
         <p class="text-xl leading-[30px] text-white z-10">{{ $project->category }}</p>
