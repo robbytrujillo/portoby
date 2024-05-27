@@ -28,11 +28,11 @@
             <button class="bg-portto-light-gold font-bold text-lg p-[14px_30px] rounded-full transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">Hire Me</button>
         </div>
     </nav> --}}
-    <x-nav/>
+     <x-nav/>
     <div class="hero container max-w-[1130px] mx-auto flex justify-between items-center relative">
         <div class="flex flex-col gap-[50px] h-fit w-fit text-white z-10">
             <p class="text-2xl font-semibold">I’m Robby Ilham 👋</p>
-            <h1 class="font-extrabold text-[80px] leading-[90px]">Fullstack Developer</h1>
+            <h1 class="font-extrabold text-[80px] leading-[90px]">My-Freelance Services</h1>
             <button class="font-bold text-[26px] leading-[39px] rounded-[30px] p-[30px_40px] bg-portto-purple w-fit transition-all duration-300 hover:shadow-[0_10px_20px_0_#4920E5]">Explore Now</button>
         </div>
         <div class="flex max-w-[471px] max-h-[567px] z-10">
@@ -120,7 +120,7 @@
     </div>
 </section>
 
-<section id="Services" class="container max-w-[1130px] mx-auto pt-[190px] pb-[100px]">
+{{-- <section id="Services" class="container max-w-[1130px] mx-auto pt-[190px] pb-[100px]">
     <div class="flex flex-col gap-[50px]">
         <div class="flex items-center justify-between">
             <h2 class="font-extrabold text-[50px] leading-[70px]">Actually, I Do Design <br>& Code for Living</h2>
@@ -167,9 +167,9 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
-<section id="Projects" class=" w-full flex flex-col py-[100px] bg-[url('{{asset('images/background/background1.png')}}')] bg-cover bg-center bg-no-repeat">
+{{-- <section id="Projects" class=" w-full flex flex-col py-[100px] bg-[url('{{asset('images/background/background1.png')}}')] bg-cover bg-center bg-no-repeat"> --}}
     <div class="flex flex-col gap-[10px] mb-[50px]">
         <h2 class="font-extrabold text-[50px] leading-[70px] text-center text-white">Great Projects</h2>
         <p class="text-lg text-center text-white">Working with awesome team from around the world</p>
@@ -413,9 +413,9 @@
             </div>
         </div>
     </div>
-</section>
+{{-- </section> --}}
 
-<section id="Workflow" class="container max-w-[1130px] mx-auto pt-[100px] pb-[200px] relative">
+{{-- <section id="Workflow" class="container max-w-[1130px] mx-auto pt-[100px] pb-[200px] relative">
     <div class="flex flex-col gap-[50px] justify-center">
         <h2 class="font-extrabold text-[50px] leading-[70px] text-center">My Workflow Suitable <br>For Any Project</h2>
         <div class="flex items-center justify-between">
@@ -470,9 +470,9 @@
             <p class="text-lg font-semibold">Companies</p>
         </div>
     </div>
-</section>
+</section> --}}
 
-<section id="Testimonials" class="bg-[#F4F5F8]">
+{{-- <section id="Testimonials" class="bg-[#F4F5F8]">
     <div class="container max-w-[1130px] mx-auto pt-[180px] pb-[100px]">
         <h2 class="font-extrabold text-[50px] leading-[70px] text-center">I Have Delivered Success <br>For All My Clients</h2>
         <div class="grid grid-cols-2 gap-[30px] mt-[50px]">
@@ -566,7 +566,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 <x-faq/>
 
