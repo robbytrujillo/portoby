@@ -21,8 +21,8 @@ class FrontController extends Controller
         ]);
     }
    
-    public function service() {
-        return view('front.service');
+    public function services() {
+        return view('front.services');
     }
     
     public function booking() {

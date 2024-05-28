@@ -208,7 +208,7 @@
         <div class="flex flex-col items-center justify-center gap-5 text-center w-fit">
             <h2 class="font-extrabold text-[40px] leading-[60px] text-white">Let Me Help You <br>Grow Business Today</h2>
             <p class="font-semibold text-lg leading-[32px] text-white">I will dedicate my entire career to focus <br>on finishing your future dreams</p>
-            <a href="book.html" class="bg-portto-light-gold font-bold text-lg p-[14px_30px] rounded-full transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">Book a Meeting</a>
+            <a href="{{ route('front.booking') }}" class="bg-portto-light-gold font-bold text-lg p-[14px_30px] rounded-full transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]">Book a Meeting</a>
         </div>
         <div class="group/projects w-[220px] overflow-hidden">    
             <div class="flex flex-col justify-center slider h-max">

@@ -8,7 +8,7 @@
                     <a href="{{ route('front.index') }}"  class="text-lg font-medium transition-all duration-300 hover:text-portto-light-gold">Home</a>
                 </li>
                 <li>
-                    <a href="{{ route('front.index') }}"  class="text-lg font-medium transition-all duration-300 hover:text-portto-light-gold">Services</a>
+                    <a href="{{ route('front.services') }}"  class="text-lg font-medium transition-all duration-300 hover:text-portto-light-gold">Services</a>
                 </li>
                 <li>
                     <a href="{{ route('front.index') }}"  class="text-lg font-medium transition-all duration-300 hover:text-portto-light-gold">Testimonials</a>
