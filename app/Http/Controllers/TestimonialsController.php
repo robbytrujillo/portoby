@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ProjectOrder;
+use App\Models\Testimonials;
 use Illuminate\Http\Request;
 
-class ProjectOrderController extends Controller
+class TestimonialsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,10 +13,6 @@ class ProjectOrderController extends Controller
     public function index()
     {
         //
-        $orders = ProjectOrder::orderBy('id', 'desc')->get();
-        return view('admin.project_orders.index', [
-            'orders' => $orders
-        ]);
     }
 
     /**
@@ -38,18 +34,15 @@ class ProjectOrderController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(ProjectOrder $projectOrder)
+    public function show(Testimonials $testimonials)
     {
         //
-        return view('admin.project_orders.show', [
-            'projectOrder' => $projectOrder
-        ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(ProjectOrder $projectOrder)
+    public function edit(Testimonials $testimonials)
     {
         //
     }
@@ -57,7 +50,7 @@ class ProjectOrderController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, ProjectOrder $projectOrder)
+    public function update(Request $request, Testimonials $testimonials)
     {
         //
     }
@@ -65,7 +58,7 @@ class ProjectOrderController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ProjectOrder $projectOrder)
+    public function destroy(Testimonials $testimonials)
     {
         //
     }
