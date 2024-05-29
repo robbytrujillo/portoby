@@ -13,6 +13,10 @@ class ProjectOrderController extends Controller
     public function index()
     {
         //
+        $orders = ProjectOrder::orderBy('id', 'desc')->get();
+        return view('admin.project_orders.index', [
+            'orders' => $orders
+        ]);
     }
 
     /**

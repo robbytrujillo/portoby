@@ -3,7 +3,7 @@
 @section('content')
 
 <section id="Content" class="flex min-h-screen bg-portto-black">
-    <div class="w-[660px] min-h-screen flex flex-col p-[30px_40px] justify-end overflow-hidden bg-[url('{{asset('images/image-hero.png')}}')] bg-cover bg-center bg-no-repeat">
+    <div class="w-[660px] min-h-screen flex flex-col p-[30px_40px] justify-end overflow-hidden bg-[url('{{asset('images/booking.png')}}')] bg-cover bg-center bg-no-repeat">
         <div class="flex flex-col bg-white p-[30px] gap-5 rounded-[30px] w-[580px]">
             <div class="flex items-start h-10 overflow-hidden">
                 <img src="{{asset('images/logos/logo-testi5.svg')}}" class="object-contain h-full" alt="photo">
@@ -18,12 +18,23 @@
             </div>
         </div>
     </div>
-    <div class="flex flex-col gap-[50px] items-center justify-center mx-auto py-4 bg-[url('{{asset('images/Ellipse.svg')}}')] bg-center bg-no-repeat bg-contain bg-[length:540px]">
+    <div class="flex flex-col gap-[50px] items-center justify-center mx-auto py-4 bg-[url('{{asset('images/Ellipse.svg')}}')] bg-center bg-no-repeat bg-[length:540px]">
         <div class="flex flex-col text-center text-white">
             <h1 class="font-extrabold text-[50px] leading-[75px]">Book a Meeting</h1>
             <p class="text-lg">Tell me anything about your biggest future dreams</p>
         </div>
-        <form action="" class="flex flex-col gap-5 w-[550px]">
+
+         @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                 <li class="py-5 font-bold text-white bg-red-700">{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+        @endif
+        <form action="{{ route('front.booking.store') }}" class="flex flex-col gap-5 w-[550px]" method="POST">
+            @csrf
             <label class="flex flex-col gap-[10px] font-semibold">
                 <span class="text-white">Complete Name</span>
                 <input type="text" name="name" id="name" class="bg-white rounded-full p-[14px_30px] appearance-none outline-none focus:ring-[3px] focus:ring-portto-green placeholder:font-normal placeholder:text-base placeholder:text-[#878C9C]" placeholder="Write your complete name" required>
@@ -37,12 +48,14 @@
                     <span class="text-white">Category</span>
                     <select name="category" id="category" class="font-semibold bg-white rounded-full p-[14px_30px] pr-[54px] appearance-none outline-none focus:ring-[3px] focus:ring-portto-green invalid:text-[#878C9C] invalid:font-normal bg-[url({{asset('images/icons/arrow-down.svg')}})] bg-no-repeat bg-[91%]" required>
                         <option value="" class="text-[#878C9C]" selected disabled hidden>Select category</option>
-                        <option value="" >Website Development</option>
+                        <option value="Website Development">Website Development</option>
+                        <option value="Graphic Desain">Graphic Desain</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
                     </select>
                 </label>
                 <label class="flex flex-col gap-[10px] font-semibold w-full">
                     <span class="text-white">Est. Budget (USD)</span>
-                    <input type="number" name="budget" id="email" class="bg-white rounded-full p-[14px_30px] appearance-none outline-none focus:ring-[3px] focus:ring-portto-green placeholder:font-normal placeholder:text-base placeholder:text-[#878C9C]" placeholder="Tell me your budget" required>
+                    <input type="number" name="budget" id="budget" class="bg-white rounded-full p-[14px_30px] appearance-none outline-none focus:ring-[3px] focus:ring-portto-green placeholder:font-normal placeholder:text-base placeholder:text-[#878C9C]" placeholder="Tell me your budget" required>
                 </label>
             </div>
             <label class="flex flex-col gap-[10px] font-semibold">
